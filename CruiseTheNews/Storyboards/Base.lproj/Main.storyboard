@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCG-aS-D4b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Cruise The News-->
         <scene sceneID="4Hw-rK-UbF">
             <objects>
-                <tableViewController id="qLm-Os-JvX" sceneMemberID="viewController">
+                <tableViewController id="qLm-Os-JvX" customClass="CruiseTheNewsTableViewController" customModule="CruiseTheNews" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ctE-TC-KW9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zhf-r6-gDE" kind="show" id="pta-8Y-7QH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,39 +52,40 @@
                             <outlet property="delegate" destination="qLm-Os-JvX" id="YwD-E2-uhZ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Cruise The News" id="DBX-Xf-LVO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iq1-5P-p5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="156"/>
+            <point key="canvasLocation" x="898" y="155"/>
         </scene>
-        <!--View Controller-->
+        <!--Cruise The News Detail View Controller-->
         <scene sceneID="08i-7c-Wcr">
             <objects>
-                <viewController id="zhf-r6-gDE" sceneMemberID="viewController">
+                <viewController id="zhf-r6-gDE" customClass="CruiseTheNewsDetailViewController" customModule="CruiseTheNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RaM-1f-3tW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="L2q-vQ-Pwl">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="80" width="343" height="571"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jem-kE-EWg">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w0-Rq-aw6">
-                                        <rect key="frame" x="0.0" y="73.5" width="343" height="24"/>
+                                        <rect key="frame" x="0.0" y="71.5" width="343" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UxQ-ZH-7nu">
-                                        <rect key="frame" x="0.0" y="147.5" width="343" height="371"/>
+                                        <rect key="frame" x="0.0" y="143.5" width="343" height="347"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-Qk-M0b">
-                                        <rect key="frame" x="0.0" y="568.5" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="540.5" width="343" height="30.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -101,7 +105,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9VL-LW-2yJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="155"/>
+            <point key="canvasLocation" x="1617" y="154"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fsx-g0-1jp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BCG-aS-D4b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RR2-pW-Dhw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qLm-Os-JvX" kind="relationship" relationship="rootViewController" id="lhl-KI-Cmo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVQ-Xc-TaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="155.17241379310346"/>
         </scene>
     </scenes>
 </document>
