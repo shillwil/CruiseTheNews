@@ -11,13 +11,11 @@ import UIKit
 class CruiseTheNewsTableViewController: UITableViewController {
     
     var newsArticles: [NewsArticle] = []
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         NewsArticleController.shared.fetchArticles { (articles) in
             if let articles = articles {
                 self.newsArticles = articles
@@ -57,5 +55,11 @@ class CruiseTheNewsTableViewController: UITableViewController {
                     detailVC.newsArticle = self.newsArticles[indexPath.row]
             }
         }
+    }
+}
+
+class CustomNavController: UINavigationController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
