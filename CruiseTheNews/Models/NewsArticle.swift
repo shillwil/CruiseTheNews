@@ -12,7 +12,6 @@ struct NewsArticle: Decodable {
     
     var author: String?
     var title: String
-    var urlToImage: String?
     var content: String?
 }
 

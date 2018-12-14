@@ -9,22 +9,21 @@
 import UIKit
 
 class CruiseTheNewsDetailViewController: UIViewController {
+    
+    // Properties and Outlets
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var articleContentLabel: UILabel!
+    
+    var newsArticle: NewsArticle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let article = self.newsArticle else { return }
 
-        // Do any additional setup after loading the view.
+        self.titleLabel.text = article.title
+        self.authorLabel.text = article.author ?? ""
+        self.articleContentLabel.text = article.content ?? ""
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
