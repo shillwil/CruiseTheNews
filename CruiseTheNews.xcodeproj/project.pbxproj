@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		38D86AD921C35451005ECA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D86AD821C35451005ECA1E /* AppDelegate.swift */; };
-		38D86ADB21C35451005ECA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D86ADA21C35451005ECA1E /* ViewController.swift */; };
 		38D86ADE21C35451005ECA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D86ADC21C35451005ECA1E /* Main.storyboard */; };
 		38D86AE021C35453005ECA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D86ADF21C35453005ECA1E /* Assets.xcassets */; };
 		38D86AE321C35453005ECA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D86AE121C35453005ECA1E /* LaunchScreen.storyboard */; };
+		38D86AEB21C35735005ECA1E /* CruiseTheNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D86AEA21C35735005ECA1E /* CruiseTheNewsTableViewController.swift */; };
+		38D86AED21C35747005ECA1E /* CruiseTheNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D86AEC21C35747005ECA1E /* CruiseTheNewsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38D86AD521C35451005ECA1E /* CruiseTheNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CruiseTheNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D86AD821C35451005ECA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38D86ADA21C35451005ECA1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38D86ADD21C35451005ECA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38D86ADF21C35453005ECA1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38D86AE221C35453005ECA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38D86AE421C35453005ECA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D86AEA21C35735005ECA1E /* CruiseTheNewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseTheNewsTableViewController.swift; sourceTree = "<group>"; };
+		38D86AEC21C35747005ECA1E /* CruiseTheNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseTheNewsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		38D86AD721C35451005ECA1E /* CruiseTheNews */ = {
 			isa = PBXGroup;
 			children = (
-				38D86AD821C35451005ECA1E /* AppDelegate.swift */,
-				38D86ADA21C35451005ECA1E /* ViewController.swift */,
-				38D86ADC21C35451005ECA1E /* Main.storyboard */,
-				38D86ADF21C35453005ECA1E /* Assets.xcassets */,
-				38D86AE121C35453005ECA1E /* LaunchScreen.storyboard */,
+				38D86AEF21C35773005ECA1E /* Storyboards */,
+				38D86AEE21C35751005ECA1E /* View Controllers */,
+				38D86AF021C3578E005ECA1E /* Resources */,
 				38D86AE421C35453005ECA1E /* Info.plist */,
 			);
 			path = CruiseTheNews;
+			sourceTree = "<group>";
+		};
+		38D86AEE21C35751005ECA1E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38D86AEA21C35735005ECA1E /* CruiseTheNewsTableViewController.swift */,
+				38D86AEC21C35747005ECA1E /* CruiseTheNewsDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		38D86AEF21C35773005ECA1E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				38D86AE121C35453005ECA1E /* LaunchScreen.storyboard */,
+				38D86ADC21C35451005ECA1E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		38D86AF021C3578E005ECA1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38D86AD821C35451005ECA1E /* AppDelegate.swift */,
+				38D86ADF21C35453005ECA1E /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D86ADB21C35451005ECA1E /* ViewController.swift in Sources */,
 				38D86AD921C35451005ECA1E /* AppDelegate.swift in Sources */,
+				38D86AED21C35747005ECA1E /* CruiseTheNewsDetailViewController.swift in Sources */,
+				38D86AEB21C35735005ECA1E /* CruiseTheNewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
